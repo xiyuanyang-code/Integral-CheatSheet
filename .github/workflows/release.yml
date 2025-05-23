@@ -1,9 +1,9 @@
-name: Release main.tex zip
+name: Release main.tex zip and PDF
 
 on:
   push:
     tags:
-      - 'v*'   # 只有推送 tag 时才触发
+      - 'v*'   # Only trigger on tag push
 
 jobs:
   build:
@@ -24,9 +24,17 @@ jobs:
           cd release
           zip main_tex_only.zip main.tex
 
-      - name: Upload release asset
+      - name: Compile main.pdf
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-lang-chinese
+          xelatex -interaction=nonstopmode main.tex
+
+      - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
-          files: release/main_tex_only.zip
+          files: |
+            release/main_tex_only.zip
+            src/main.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
