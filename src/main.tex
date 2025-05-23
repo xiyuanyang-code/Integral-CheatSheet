@@ -1,0 +1,103 @@
+\documentclass[10pt, a4paper, twocolumn]{article}
+\usepackage{geometry}
+\geometry{left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm}
+\linespread{0.5}
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{multicol}
+\setlength\columnsep{0.4cm}  % 设置两栏之间的间距为0.6cm
+\columnseprule=1pt           % 实现插入分隔线，用于分栏
+
+\usepackage{enumitem}
+\title{Integral Cheatsheet}
+\author{Xiyuan Yang}
+\newtheorem{definition}{定义}
+\newtheorem{lemma}{引理}
+\newtheorem{theorem}{定理}
+\DeclareMathOperator{\Ima}{Im}%定义新符号
+\DeclareMathOperator{\Rank}{rank}%定义求秩算子
+
+
+\setlength{\floatsep}{2pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{2pt plus 2pt minus 2pt}
+\setlength{\intextsep}{2pt plus 2pt minus 2pt}
+
+
+\begin{document}
+
+\maketitle
+\section{基本的积分公式}
+
+\begin{enumerate}
+    \item $\int {x^\alpha} dx = \frac{x^{\alpha+1}}{\alpha+1} + C.\,(\alpha \neq -1)$
+    \item $\int \frac{1}{x} dx  = \ln{\left | x \right |} + C$
+    \item $\int a^x dx = \frac{a^x}{\ln a} + C.\, (0 < a \neq 1)$
+    \item $\int e^x dx = e^x +C$
+    \item $\int \sin x dx = -\cos x + C$
+    \item $\int \cos x dx = \sin x + C$
+    \item $\int \sec^2 x dx = \tan x + C$
+    \item $\int \sec x \tan x dx = \sec x + C$
+    \item $ \int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin \frac{x}{a} + C$
+    \item $\int \frac{dx}{a^2 + x^2} = \frac{1}{a} \arctan \frac{x}{a} + C$
+    \item $\int \frac{dx}{x^2 - a^2} = \frac{1}{2a} \ln \left| \frac{x - a}{x + a} \right| + C$
+    \item $\int \frac{dx}{a^2 - x^2} = \frac{1}{2a} \ln \left| \frac{x + a}{x - a} \right| + C$
+    \item $\int \frac{dx}{\sqrt{x^2 + a^2}} = \ln \left| x + \sqrt{x^2 + a^2} \right| + C$
+    \item $\int \sec x dx = \ln |\sec x + \tan x| + C$
+\end{enumerate}
+
+\section{二级结论}
+
+
+\subsection{幂函数}
+\begin{enumerate}
+    \item $\int \frac{1}{x} dx = \ln(x) + C$
+    \item $\int x^a dx = \frac{x^{a+1}}{a+1} + C \quad (a \neq -1)$
+    \item $\int a^x dx = \frac{a^x}{\ln(a)} + C \quad (a > 0, a \neq 1)$
+    \item $\int \frac{1}{x^a} dx = -\frac{x^{(1-a)}}{1-a} + C \quad (a \neq 1)$
+    \item $\int xe^{ax} dx = \frac{e^{ax}}{a^2}(ax-1) + C$
+    \item $\int x^n e^{ax} dx = \frac{x^n e^{ax}}{a} - \frac{n}{a}\int x^{n-1} e^{ax} dx$
+    \item $\int e^{ax}\sin bx dx = \frac{e^{ax}}{a^2+b^2}(a\sin bx - b\cos bx) + C$
+    \item $\int e^{ax}\cos bx dx = \frac{e^{ax}}{a^2+b^2}(a\cos bx + b\sin bx) + C$
+\end{enumerate}
+
+\subsection{三角函数}
+\begin{enumerate}
+    \item $\int \sin(x) dx = -\cos(x) + C$
+    \item $\int \frac{1}{\sin(x)} dx = \ln\Bigg|\frac{1}{\sin(x)} - \frac{\cos(x)}{\sin(x)}\Bigg| + C$
+    \item $\int \sin(ax)\sin(bx) dx = \frac{\sin(a-b)x}{2(a-b)} - \frac{\sin(a+b)x}{2(a+b)} + C$
+    \item $\int \sin^2(x) dx = \frac{1}{2}x - \frac{1}{4}\sin(2x) + C$
+    \item $\int \sin^3(x) dx = \frac{1}{12}\Big(\cos(3x)-9\cos(x)\Big) + C$
+    \item $\int \cos(x) dx = \sin(x) + C$
+    \item $\int \frac{1}{\cos(x)} dx = \int \sec(x)dx = \ln|\sec(x)+\tan(x)| + C$
+    \item $\int \cos(ax)\cos(bx) dx = \frac{\sin(a-b)x}{2(a-b)} + \frac{\sin(a+b)x}{2(a+b)} + C$
+     \item $\int \cos mx \cos nx dx = \frac{\sin(m-n)x}{2(m-n)} + \frac{\sin(m+n)x}{2(m+n)} + C$
+    \item $\int \sin mx \cos nx dx = -\frac{\cos(m-n)x}{2(m-n)} - \frac{\cos(m+n)x}{2(m+n)} + C$
+    \item $\int \cos^2(x) dx = \frac{1}{2}x + \frac{1}{4}\sin(2x) + C$
+    \item $\int \cos^3(x) dx = \frac{1}{12}\Big(9\sin(x)+\sin(3x)\Big) + C$
+    \item $\int \sin(x)\cos(x) dx = -\frac{\cos^2(x)}{2} + C$
+    \item $\int \sin^2(x)\cos^2(x) dx = \frac{1}{32}\Big(4x-\sin(4x)\Big) + C$
+    \item $\int \tan(x) dx = -\ln|\cos(x)| + C$
+    \item $\int \tan(x) dx = \ln|\sec(x)| + C$
+    \item $\int \tan^2(x) dx = \tan(x)-x + C$
+    \item $\int \tan^3(x) dx = \frac{\tan^2(x)}{2} + \ln|\cos(x)| + C$
+    \item $\int \frac{1}{\tan(x)} dx = \ln|\sin(x)| + C$
+    \item $\int \frac{1}{\tan^2(x)} dx = -\frac{1}{\tan(x)}-x + C$
+    \item $\int \frac{1}{\tan^3(x)} dx = \frac{\tan^2(x)}{2} - \ln|\sin(x)| + C$
+\end{enumerate}
+
+\subsection{倒数函数}
+\begin{enumerate}
+    \item $\int \frac{1}{a^2+x^2} dx = \frac{1}{a} \arctan\left(\frac{x}{a}\right) + C$
+    \item $\int \frac{1}{x^2-a^2} dx = \frac{1}{a} \ln(a^2+x^2) + C$
+    \item $\int \frac{1}{1-x^2} dx = \frac{\ln|u+1|-\ln|u-1|}{2} + C$
+    \item $\int \frac{1}{a^2-x^2} dx = \frac{1}{2a} \ln\left|\frac{x+a}{x-a}\right| + C$
+    \item $\int \frac{1}{x^2-a^2} dx = \frac{1}{2a} \ln\left|\frac{x-a}{x+a}\right| + C$
+    \item $\int \frac{1}{\sqrt{a^2+u^2}} dx = \ln(u+\sqrt{a^2+x^2}) + C$
+\end{enumerate}
+\end{document}
