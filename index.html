@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Integral CheatSheet</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
     <style>
         body {
             font-family: sans-serif;
@@ -26,22 +26,33 @@
 </head>
 
 <body>
-    <h1>积分备忘录</h1>
+    <h1>Integral CheatSheet</h1>
+    <h3>It is very slow, please wait patiently...😘</h3>
+    <p>Source Code: <a
+            href="https://github.com/xiyuanyang-code/Integral-CheatSheet">https://github.com/xiyuanyang-code/Integral-CheatSheet</a>
+    </p>
+    <p>My Blog: <a href="https://xiyuanyang-code.github.io/">https://xiyuanyang-code.github.io/</a></p>
     <div id="formulas"></div>
     <script>
-        fetch('src/integrals.json')
-            .then(res => res.json())
-            .then(data => {
-                const container = document.getElementById('formulas');
-                data.forEach(item => {
-                    const div = document.createElement('div');
-                    div.className = 'formula';
-                    div.innerHTML = `\\(${item.formula}\\)` +
-                        (item.note ? `<div class="note">\\(${item.note}\\)</div>` : '');
-                    container.appendChild(div);
+        // Wait for MathJax to be loaded
+        window.addEventListener('DOMContentLoaded', function () {
+            fetch('src/integrals.json')
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById('formulas');
+                    let html = '';
+                    data.forEach(item => {
+                        html += `<div class="formula">\\(${item.formula}\\)` +
+                            (item.note ? `<div class="note">\\(${item.note}\\)</div>` : '') +
+                            `</div>`;
+                    });
+                    container.innerHTML = html;
+                    // Only typeset the formulas container
+                    if (window.MathJax && MathJax.typesetPromise) {
+                        MathJax.typesetPromise([container]);
+                    }
                 });
-                if (window.MathJax) MathJax.typeset();
-            });
+        });
     </script>
 </body>
 
