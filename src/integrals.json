@@ -1,0 +1,198 @@
+[
+  {
+    "formula": "\\int {x^\\alpha} dx = \\frac{x^{\\alpha+1}}{\\alpha+1} + C",
+    "note": "(\\alpha \\neq -1)"
+  },
+  {
+    "formula": "\\int \\frac{1}{x} dx  = \\ln{\\left | x \\right |} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int a^x dx = \\frac{a^x}{\\ln a} + C",
+    "note": "(0 < a \\neq 1)"
+  },
+  {
+    "formula": "\\int e^x dx = e^x +C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin x dx = -\\cos x + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\cos x dx = \\sin x + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sec^2 x dx = \\tan x + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sec x \\tan x dx = \\sec x + C",
+    "note": ""
+  },
+  {
+    "formula": " \\int \\frac{dx}{\\sqrt{a^2 - x^2}} = \\arcsin \\frac{x}{a} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{dx}{a^2 + x^2} = \\frac{1}{a} \\arctan \\frac{x}{a} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{dx}{x^2 - a^2} = \\frac{1}{2a} \\ln \\left| \\frac{x - a}{x + a} \\right| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{dx}{a^2 - x^2} = \\frac{1}{2a} \\ln \\left| \\frac{x + a}{x - a} \\right| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{dx}{\\sqrt{x^2 + a^2}} = \\ln \\left| x + \\sqrt{x^2 + a^2} \\right| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sec x dx = \\ln |\\sec x + \\tan x| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{x} dx = \\ln(x) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int x^a dx = \\frac{x^{a+1}}{a+1} + C \\quad (a \\neq -1)",
+    "note": ""
+  },
+  {
+    "formula": "\\int a^x dx = \\frac{a^x}{\\ln(a)} + C \\quad (a > 0, a \\neq 1)",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{x^a} dx = -\\frac{x^{(1-a)}}{1-a} + C \\quad (a \\neq 1)",
+    "note": ""
+  },
+  {
+    "formula": "\\int xe^{ax} dx = \\frac{e^{ax}}{a^2}(ax-1) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int x^n e^{ax} dx = \\frac{x^n e^{ax}}{a} - \\frac{n}{a}\\int x^{n-1} e^{ax} dx",
+    "note": ""
+  },
+  {
+    "formula": "\\int e^{ax}\\sin bx dx = \\frac{e^{ax}}{a^2+b^2}(a\\sin bx - b\\cos bx) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int e^{ax}\\cos bx dx = \\frac{e^{ax}}{a^2+b^2}(a\\cos bx + b\\sin bx) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin(x) dx = -\\cos(x) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{\\sin(x)} dx = \\ln\\Bigg|\\frac{1}{\\sin(x)} - \\frac{\\cos(x)}{\\sin(x)}\\Bigg| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin(ax)\\sin(bx) dx = \\frac{\\sin(a-b)x}{2(a-b)} - \\frac{\\sin(a+b)x}{2(a+b)} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin^2(x) dx = \\frac{1}{2}x - \\frac{1}{4}\\sin(2x) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin^3(x) dx = \\frac{1}{12}\\Big(\\cos(3x)-9\\cos(x)\\Big) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\cos(x) dx = \\sin(x) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{\\cos(x)} dx = \\int \\sec(x)dx = \\ln|\\sec(x)+\\tan(x)| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\cos(ax)\\cos(bx) dx = \\frac{\\sin(a-b)x}{2(a-b)} + \\frac{\\sin(a+b)x}{2(a+b)} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\cos mx \\cos nx dx = \\frac{\\sin(m-n)x}{2(m-n)} + \\frac{\\sin(m+n)x}{2(m+n)} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin mx \\cos nx dx = -\\frac{\\cos(m-n)x}{2(m-n)} - \\frac{\\cos(m+n)x}{2(m+n)} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\cos^2(x) dx = \\frac{1}{2}x + \\frac{1}{4}\\sin(2x) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\cos^3(x) dx = \\frac{1}{12}\\Big(9\\sin(x)+\\sin(3x)\\Big) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin(x)\\cos(x) dx = -\\frac{\\cos^2(x)}{2} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\sin^2(x)\\cos^2(x) dx = \\frac{1}{32}\\Big(4x-\\sin(4x)\\Big) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\tan(x) dx = -\\ln|\\cos(x)| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\tan(x) dx = \\ln|\\sec(x)| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\tan^2(x) dx = \\tan(x)-x + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\tan^3(x) dx = \\frac{\\tan^2(x)}{2} + \\ln|\\cos(x)| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{\\tan(x)} dx = \\ln|\\sin(x)| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{\\tan^2(x)} dx = -\\frac{1}{\\tan(x)}-x + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{\\tan^3(x)} dx = \\frac{\\tan^2(x)}{2} - \\ln|\\sin(x)| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{a^2+x^2} dx = \\frac{1}{a} \\arctan\\left(\\frac{x}{a}\\right) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{x^2-a^2} dx = \\frac{1}{a} \\ln(a^2+x^2) + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{1-x^2} dx = \\frac{\\ln|u+1|-\\ln|u-1|}{2} + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{a^2-x^2} dx = \\frac{1}{2a} \\ln\\left|\\frac{x+a}{x-a}\\right| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{x^2-a^2} dx = \\frac{1}{2a} \\ln\\left|\\frac{x-a}{x+a}\\right| + C",
+    "note": ""
+  },
+  {
+    "formula": "\\int \\frac{1}{\\sqrt{a^2+u^2}} dx = \\ln(u+\\sqrt{a^2+x^2}) + C",
+    "note": ""
+  }
+]
