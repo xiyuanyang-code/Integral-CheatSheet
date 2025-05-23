@@ -1,0 +1,30 @@
+name: Release main.tex zip
+
+on:
+  push:
+    tags:
+      - 'v*'   # 只有推送 tag 时才触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Prepare release directory
+        run: |
+          mkdir release
+          cp main.tex release/
+
+      - name: Create zip archive
+        run: |
+          cd release
+          zip main_tex_only.zip main.tex
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/main_tex_only.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
