@@ -22,7 +22,7 @@ jobs:
       - name: Create zip archive
         run: |
           cd release
-          zip main_tex_only.zip main.tex
+          zip files.zip main.tex
 
       - name: Compile main.pdf
         run: |
@@ -34,7 +34,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release/main_tex_only.zip
-            src/main.pdf
+            release/files.zip
+            main.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
