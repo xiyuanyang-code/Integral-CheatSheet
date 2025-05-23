@@ -49,12 +49,4 @@ Open `index.html` in your browser to view all integral formulas with LaTeX rende
 
 Contributions are welcome! Feel free to add or correct formulas, improve scripts, or submit issues and pull requests.
 
-## Example Screenshot
-
-![screenshot](https://mathjax.org/badge/badge-square.png)  
-_(Replace with an actual screenshot of your web page)_
-
----
-
-**Author:** Xiyuan Yang  
-**License:** MIT License
+In one word, **PR Welcome!😍**
