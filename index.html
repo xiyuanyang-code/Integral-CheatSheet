@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Integral CheatSheet</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 2em;
+        }
+
+        .formula {
+            margin: 1em 0;
+            padding: 0.5em;
+            border-bottom: 1px solid #eee;
+        }
+
+        .note {
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>积分备忘录</h1>
+    <div id="formulas"></div>
+    <script>
+        fetch('src/integrals.json')
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('formulas');
+                data.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'formula';
+                    div.innerHTML = `\\(${item.formula}\\)` +
+                        (item.note ? `<div class="note">\\(${item.note}\\)</div>` : '');
+                    container.appendChild(div);
+                });
+                if (window.MathJax) MathJax.typeset();
+            });
+    </script>
+</body>
+
+</html>
